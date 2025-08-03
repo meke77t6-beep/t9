@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورة التداول المالي - لوحة التحكم</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --sidebar-width: 280px;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
+            right: 0;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        .sidebar-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+        .user-profile {
+            text-align: center;
+            padding: 20px;
+        }
+        .user-profile img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #f1f1f1;
+        }
+        .sidebar-menu {
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-menu li {
+            padding: 12px 20px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+        .sidebar-menu li a {
+            color: #555;
+            text-decoration: none;
+            display: block;
+        }
+        .sidebar-menu li:hover {
+            background: #f8f9fa;
+        }
+        .sidebar-menu li.active {
+            background: #e9f5ff;
+            border-right: 3px solid #3498db;
+        }
+        .sidebar-menu li i {
+            margin-left: 10px;
+        }
+        .main-content {
+            margin-right: var(--sidebar-width);
+            padding: 30px;
+        }
+        .course-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .module-card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .module-card .card-header {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #eee;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .lesson-item {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f1f1f1;
+            display: flex;
+            align-items: center;
+        }
+        .lesson-item:last-child {
+            border-bottom: none;
+        }
+        .lesson-item i {
+            margin-left: 10px;
+            color: #3498db;
+        }
+        .progress {
+            height: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h4>أكاديمية التداول</h4>
+        </div>
+        
+        <div class="user-profile">
+            <img src="user-avatar.jpg" alt="صورة المستخدم">
+            <h5>أحمد محمد</h5>
+            <p class="text-muted mb-0">دورة: أساسيات التداول</p>
+        </div>
+        
+        <ul class="sidebar-menu">
+            <li class="active"><a href="#"><i class="bi bi-house-door"></i> لوحة التحكم</a></li>
+            <li><a href="#"><i class="bi bi-play-circle"></i> دوراتي</a></li>
+            <li><a href="#"><i class="bi bi-journal-bookmark"></i> التقدم</a></li>
+            <li><a href="#"><i class="bi bi-question-circle"></i> الاختبارات</a></li>
+            <li><a href="#"><i class="bi bi-trophy"></i> الشهادات</a></li>
+            <li><a href="#"><i class="bi bi-gear"></i> الإعدادات</a></li>
+            <li><a href="#"><i class="bi bi-box-arrow-left"></i> تسجيل الخروج</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <div class="course-header">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h2>دورة أساسيات التداول للمبتدئين</h2>
+                    <p class="mb-0">تعلم أساسيات التداول في الأسواق المالية من الصفر حتى الاحتراف</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-grow-1 me-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span>إكمال الدورة</span>
+                                <span>35%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <button class="btn btn-light">استمر في التعلم</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card module-card">
+                    <div class="card-header" data-bs-toggle="collapse" href="#module1">
+                        الوحدة 1: مقدمة في التداول
+                    </div>
+                    <div class="collapse show" id="module1">
+                        <div class="card-body p-0">
+                            <div class="lesson-item">
+                                <i class="bi bi-play-circle-fill"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">مقدمة عن التداول والأسواق المالية</h6>
+                                    <small class="text-muted">15 دقيقة</small>
+                                </div>
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                            </div>
+                            <div class="lesson-item">
+                                <i class="bi bi-play-circle-fill"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">أنواع الأسواق المالية</h6>
+                                    <small class="text-muted">22 دقيقة</small>
+                                </div>
+                                <i class="bi bi-check-circle-fill text-success"></i>
+                            </div>
+                            <div class="lesson-item">
+                                <i class="bi bi-play-circle"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0">أساسيات التحليل الفني</h6>
+                                    <small class="text-muted">30 دقيقة</small>
+                                </div>
+                                <span class="badge bg-primary">جديد</span>
+                            </div>
+                            <div class="lesson-item">
+                                <i class="bi bi-lock"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 text-muted">أساسيات التحليل الأساسي</h6>
+                                    <small class="text-muted">سيتم فتحه بعد إكمال الدروس السابقة</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card module-card">
+                    <div class="card-header" data-bs-toggle="collapse" href="#module2">
+                        الوحدة 2: منصة التداول
+                    </div>
+                    <div class="collapse" id="module2">
+                        <div class="card-body p-0">
+                            <div class="lesson-item">
+                                <i class="bi bi-lock"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-0 text-muted">كيفية فتح حساب تداول</h6>
+                                    <small class="text-muted">سيتم فتحه بعد إكمال الوحدة الأولى</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">معلومات الدورة</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-play-circle me-2"></i> الدروس</span>
+                                <span class="badge bg-primary">24 درس</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-clock me-2"></i> المدة</span>
+                                <span>8 ساعات</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-bar-chart me-2"></i> المستوى</span>
+                                <span>مبتدئ</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span><i class="bi bi-people me-2"></i> الطلاب</span>
+                                <span>1,245 طالب</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">اختبار الوحدة الأولى</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>اختبر معلوماتك في الوحدة الأولى بعد إكمال جميع الدروس</p>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary">بدء الاختبار</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
